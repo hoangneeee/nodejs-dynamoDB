@@ -7,8 +7,8 @@ nvm install 14
 
 # Create our working directory if it doesnt exist
 DIR="home/ubuntu/demo_deploy"
-if [-d "$DIR"]; then
-  echo "${DIR} exist"
+if [ -d "$DIR" ]; then
+  echo "${DIR} exists"
 else
   echo "Creating ${DIR} directory"
   mkdir ${DIR}

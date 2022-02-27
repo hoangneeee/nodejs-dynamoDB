@@ -1,11 +1,13 @@
 #!/bin/bash
 
+sudo chmod -R 777 /home/ubuntu/demo_deploy
+
 cd /home/ubuntu/demo_deploy
 
-# Add npm and node to path
+#add npm and node to path
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # load nvm
-[ -s "$NVM_DIR/bash_completion"] && \. "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
 
 # Install pm2
 npm install -g pm2
